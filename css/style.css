@@ -1,5 +1,4 @@
 text_main{
-  position: relative;
-  left: 100px;
-  max-width: 10px;
+  width: 100px;
+  height: 100px;
 }
