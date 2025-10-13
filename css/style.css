@@ -5,4 +5,6 @@
 .img_main{
   height: 523px;
   width: 766px;
+  position: absolute;
+  left: 500px;
 }
