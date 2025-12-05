@@ -186,8 +186,8 @@
 }
 
 .img_pe_2 {
-  width: 225px;
-  height: 307px;
+  width: 271px;
+  height: 370px;
   border-radius: 15px;
   display: block;
   margin: 0 auto;
@@ -234,5 +234,5 @@
 
 .txt {
   position: relative;
-  top: 65px;
+  top: 5px;
 }
