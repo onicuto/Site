@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+  </head>
+  <body>
+    <script>
+      // Первая часть
+      let num = 1;
+      num+=12;
+      num-=14;
+      num*=5;
+      num/=7;
+      num++;
+      num--;
+      alert(num);
+      
+      let a = 156;
+      let b = 12;
+      alert(a/b);
+      alert(a+b);
+      alert(a-b);
+      alert(a*b);
+      
+      let str1='Привет,';
+      let str2='Мир!';
+      alert(str1+str2);
+
+      // Задание 4
+      let str = 'abcde';
+      alert('Задание 4:');
+      alert('Первый символ: ' + str[0]);
+      alert('Третий символ: ' + str[2]);
+      alert('Пятый символ: ' + str[4]);
+
+      // Задание 5
+      let number = prompt("Введите число:");
+      if (number > 0 && number < 5) {
+          alert("Верно");
+      } else {
+          alert("Неверно");
+      }
+
+      // Задание 6
+      let strForReplace = 'aaa@bbb@ccc';
+      let newStrResult = strForReplace.replace(/@/g, '!');
+      alert('Задание 6: ' + newStrResult);
+
+      // Задание 7
+      let strForLength = 'я учусь на ИРИТ!';
+      let lengthResult = strForLength.length;
+      alert('Задание 7: Длина строки = ' + lengthResult);
+
+      // Задание 8
+      alert('Задание 8: Смотрите консоль (F12)');
+      for (let i = 1; i <= 9; i++) {
+          let row = '';
+          for (let j = 1; j <= i; j++) {
+              row += i;
+          }
+          console.log(row);
+      }
+
+      // Задание 9
+      let n = 3;
+      let m = 4;
+      let k = Math.sqrt(n * n + m * m);
+      alert('Задание 9: Гипотенуза = ' + k);
+  
+      // Задание 10
+      let result = confirm("Нажмите ОК или Отмена");
+      if (result) {
+        alert("Вы нажали ОК");
+      } else {
+        alert("Вы нажали Отмена");
+      }
+
+      // Задание 11
+      alert("=== Задание 11 ===");
+      let userName = prompt("Введите свое имя");
+      if (userName !== null && userName !== "") {
+        let isCorrect = confirm("Введенное имя правильное?");
+        if (isCorrect) {
+          alert("Здравствуйте, " + userName);
+        } else {
+          alert("Имя введено неправильно");
+        }
+      } else {
+        alert("Имя не введено");
+      }
+
+      // Задание 12
+      alert("=== Задание 12 ===");
+      alert("Найдем наибольшее из трех чисел");
+      let num1 = parseFloat(prompt("Введите первое число:"));
+      let num2 = parseFloat(prompt("Введите второе число:"));
+      let num3 = parseFloat(prompt("Введите третье число:"));
+      
+      let maxNum = num1;
+      if (num2 > maxNum) maxNum = num2;
+      if (num3 > maxNum) maxNum = num3;
+      
+      alert("Наибольшее число: " + maxNum);
+
+      // Задание 13
+      alert("=== Задание 13 ===");
+      let threeDigit = prompt("Введите трехзначное число:");
+      
+      if (threeDigit.length === 3 && !isNaN(threeDigit)) {
+        let digit1 = parseInt(threeDigit[0]);
+        let digit2 = parseInt(threeDigit[1]);
+        let digit3 = parseInt(threeDigit[2]);
+        
+        if (parseInt(threeDigit) % 2 === 0) {
+          let sum = digit1 + digit2 + digit3;
+          alert("Число четное. Сумма цифр: " + sum);
+        } else {
+          let product = digit1 * digit2 * digit3;
+          alert("Число нечетное. Произведение цифр: " + product);
+        }
+      } else {
+        alert("Ошибка! Введено не трехзначное число.");
+      }
+
+      // Задание 14
+      alert("=== Задание 14 ===");
+      let numInput = parseInt(prompt("Введите число (1-4):"));
+      let season;
+      
+      switch(numInput) {
+        case 1:
+          season = 'весна';
+          break;
+        case 2:
+          season = 'лето';
+          break;
+        case 3:
+          season = 'осень';
+          break;
+        case 4:
+          season = 'зима';
+          break;
+        default:
+          season = 'некорректное значение';
+      }
+      
+      alert("Результат: " + season);
+
+      // Задание 15
+      alert("=== Задание 15 ===");
+      let originalNum = prompt("Введите целое число:");
+      let reversedNum = "";
+      let i = originalNum.length - 1;
+      
+      while (i >= 0) {
+        reversedNum += originalNum[i];
+        i--;
+      }
+      
+      alert("Число в обратном порядке: " + reversedNum);
+
+      // Задание 16
+      alert("=== Задание 16 ===");
+      let totalSum = 0;
+      let count = 0;
+      let inputNum;
+      
+      while (true) {
+        inputNum = prompt("Введите число (0 для завершения):");
+        
+        if (inputNum === null) {
+          break;
+        }
+        
+        inputNum = parseFloat(inputNum);
+        
+        if (inputNum === 0) {
+          break;
+        }
+        
+        if (!isNaN(inputNum)) {
+          totalSum += inputNum;
+          count++;
+        }
+      }
+      
+      if (count > 0) {
+        let average = totalSum / count;
+        alert("Статистика:\n" +
+              "Количество чисел: " + count + "\n" +
+              "Общая сумма: " + totalSum + "\n" +
+              "Среднее арифметическое: " + average.toFixed(2));
+      } else {
+        alert("Не было введено чисел");
+      }
+
+      // Задание 17
+      alert("=== Задание 17 ===");
+      function squareNumber(x) {
+        return x * x;
+      }
+      let numForSquare = parseFloat(prompt("Введите число для возведения в квадрат:"));
+      alert("Квадрат числа " + numForSquare + " = " + squareNumber(numForSquare));
+
+      // Задание 18
+      alert("=== Задание 18 ===");
+      function getDayOfWeek(dayNumber) {
+        switch(dayNumber) {
+          case 1: return "Понедельник";
+          case 2: return "Вторник";
+          case 3: return "Среда";
+          case 4: return "Четверг";
+          case 5: return "Пятница";
+          case 6: return "Суббота";
+          case 7: return "Воскресенье";
+          default: return "Некорректный номер дня";
+        }
+      }
+      let dayNum = parseInt(prompt("Введите число от 1 до 7:"));
+      alert("День недели: " + getDayOfWeek(dayNum));
+
+      // Задание 19
+      alert("=== Задание 19 ===");
+      function drawPyramid() {
+        let rows = parseInt(prompt("Введите количество рядов для пирамиды:"));
+        let pyramid = "";
+        
+        for (let i = 1; i <= rows; i++) {
+          for (let j = 1; j <= i; j++) {
+            pyramid += "x";
+          }
+          pyramid += "\n";
+        }
+        
+        alert("Пирамида:\n" + pyramid);
+        console.log("Пирамида:\n" + pyramid);
+      }
+      drawPyramid();
+
+      // Задание 20
+      alert("=== Задание 20 ===");
+      let checkNumber = function(num) {
+        return num > 0 && num < 10;
+      };
+      let testNum = parseFloat(prompt("Введите число для проверки (0-10):"));
+      alert("Результат проверки: " + checkNumber(testNum));
+
+      // Задание 21
+      alert("=== Задание 21 ===");
+      let calculate = (coeff1, coeff2, coeff3, coeff4, coeff5, xValue) => {
+        return coeff1 * Math.pow(xValue, 4) + 
+               coeff2 * Math.pow(xValue, 3) + 
+               coeff3 * Math.pow(xValue, 2) + 
+               coeff4 * xValue + 
+               coeff5;
+      };
+      
+      alert("Введите коэффициенты:");
+      let coeff1 = parseFloat(prompt("a1:"));
+      let coeff2 = parseFloat(prompt("a2:"));
+      let coeff3 = parseFloat(prompt("a3:"));
+      let coeff4 = parseFloat(prompt("a4:"));
+      let coeff5 = parseFloat(prompt("a5:"));
+      let xValue = parseFloat(prompt("x:"));
+      
+      let resulta = (coeff1, coeff2, coeff3, coeff4, coeff5, xValue);
+      alert("Результат: " + resulta);
+
+      // Задание 22
+      alert("=== Задание 22 ===");
+      function fibonacci(n) {
+        if (n <= 1) return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+      }
+      
+      let fibNum = parseInt(prompt("Введите номер числа Фибоначчи:"));
+      alert("Число Фибоначчи с номером " + fibNum + " = " + fibonacci(fibNum));
+
+      // Задание 23
+      alert("=== Задание 23 ===");
+      function aFunction(printFunction) {
+        let userNumber = prompt("Введите число:");
+        printFunction(userNumber);
+      }
+      
+      let anonymousFunc = function(number) {
+        console.log("Введенное число: " + number);
+        alert("Число выведено в консоль (F12)");
+      };
+      
+      aFunction(anonymousFunc);
+
+      alert("Все задания выполнены!");
+    </script>
+  </body>
+</html>
