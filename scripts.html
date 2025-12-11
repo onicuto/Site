@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>JS</title>
+    <title>JS Задания</title>
   </head>
   <body>
-    <script>
-      // Первая часть
+    <h1>JavaScript Лабораторная работа №4</h1>
+    
+    <button onclick="
       let num = 1;
       num+=12;
       num-=14;
@@ -14,46 +15,56 @@
       num/=7;
       num++;
       num--;
-      alert(num);
-      
+      alert('1: ' + num);
+    ">1</button>
+    
+    <button onclick="
       let a = 156;
       let b = 12;
-      alert(a/b);
-      alert(a+b);
-      alert(a-b);
-      alert(a*b);
-      
+      alert('2:\n' + 
+            'a / b = ' + (a/b) + '\n' +
+            'a + b = ' + (a+b) + '\n' +
+            'a - b = ' + (a-b) + '\n' +
+            'a * b = ' + (a*b));
+    ">2</button>
+    
+    <button onclick="
       let str1='Привет,';
       let str2='Мир!';
-      alert(str1+str2);
-
-      // Задание 4
+      alert('3: ' + str1 + str2);
+    ">3</button>
+    
+    <button onclick="
       let str = 'abcde';
-      alert('Задание 4:');
-      alert('Первый символ: ' + str[0]);
-      alert('Третий символ: ' + str[2]);
-      alert('Пятый символ: ' + str[4]);
-
-      // Задание 5
-      let number = prompt("Введите число:");
+      alert('4:\n' +
+            'Первый символ: ' + str[0] + '\n' +
+            'Третий символ: ' + str[2] + '\n' +
+            'Пятый символ: ' + str[4]);
+    ">4</button>
+    
+    <button onclick="
+      let number = prompt('5: Введите число:');
       if (number > 0 && number < 5) {
-          alert("Верно");
+          alert('5: Верно');
       } else {
-          alert("Неверно");
+          alert('5: Неверно');
       }
-
-      // Задание 6
+    ">5</button>
+    
+    <button onclick="
       let strForReplace = 'aaa@bbb@ccc';
       let newStrResult = strForReplace.replace(/@/g, '!');
-      alert('Задание 6: ' + newStrResult);
-
-      // Задание 7
+      alert('6: ' + newStrResult);
+    ">6</button>
+    
+    <button onclick="
       let strForLength = 'я учусь на ИРИТ!';
       let lengthResult = strForLength.length;
-      alert('Задание 7: Длина строки = ' + lengthResult);
-
-      // Задание 8
-      alert('Задание 8: Смотрите консоль (F12)');
+      alert('7: Длина строки = ' + lengthResult);
+    ">7</button>
+    
+    <button onclick="
+      alert('8: Смотрите консоль (F12)');
       for (let i = 1; i <= 9; i++) {
           let row = '';
           for (let j = 1; j <= i; j++) {
@@ -61,51 +72,52 @@
           }
           console.log(row);
       }
-
-      // Задание 9
+    ">8</button>
+    
+    <button onclick="
       let n = 3;
       let m = 4;
       let k = Math.sqrt(n * n + m * m);
-      alert('Задание 9: Гипотенуза = ' + k);
-  
-      // Задание 10
-      let result = confirm("Нажмите ОК или Отмена");
+      alert('9: Гипотенуза = ' + k);
+    ">9</button>
+    
+    <button onclick="
+      let result = confirm('10: Нажмите ОК или Отмена');
       if (result) {
-        alert("Вы нажали ОК");
+        alert('10: Вы нажали ОК');
       } else {
-        alert("Вы нажали Отмена");
+        alert('10: Вы нажали Отмена');
       }
-
-      // Задание 11
-      alert("=== Задание 11 ===");
-      let userName = prompt("Введите свое имя");
-      if (userName !== null && userName !== "") {
-        let isCorrect = confirm("Введенное имя правильное?");
+    ">10</button>
+    
+    <button onclick="
+      let userName = prompt('11: Введите свое имя');
+      if (userName !== null && userName !== '') {
+        let isCorrect = confirm('11: Введенное имя правильное?');
         if (isCorrect) {
-          alert("Здравствуйте, " + userName);
+          alert('11: Здравствуйте, ' + userName);
         } else {
-          alert("Имя введено неправильно");
+          alert('11: Имя введено неправильно');
         }
       } else {
-        alert("Имя не введено");
+        alert('11: Имя не введено');
       }
-
-      // Задание 12
-      alert("=== Задание 12 ===");
-      alert("Найдем наибольшее из трех чисел");
-      let num1 = parseFloat(prompt("Введите первое число:"));
-      let num2 = parseFloat(prompt("Введите второе число:"));
-      let num3 = parseFloat(prompt("Введите третье число:"));
+    ">11</button>
+    
+    <button onclick="
+      let num1 = prompt('12: Введите первое число:');
+      let num2 = prompt('12: Введите второе число:');
+      let num3 = prompt('12: Введите третье число:');
       
       let maxNum = num1;
       if (num2 > maxNum) maxNum = num2;
       if (num3 > maxNum) maxNum = num3;
       
-      alert("Наибольшее число: " + maxNum);
-
-      // Задание 13
-      alert("=== Задание 13 ===");
-      let threeDigit = prompt("Введите трехзначное число:");
+      alert('12: Наибольшее число: ' + maxNum);
+    ">12</button>
+    
+    <button onclick="
+      let threeDigit = prompt('13: Введите трехзначное число:');
       
       if (threeDigit.length === 3 && !isNaN(threeDigit)) {
         let digit1 = parseInt(threeDigit[0]);
@@ -114,18 +126,18 @@
         
         if (parseInt(threeDigit) % 2 === 0) {
           let sum = digit1 + digit2 + digit3;
-          alert("Число четное. Сумма цифр: " + sum);
+          alert('13: Число четное. Сумма цифр: ' + sum);
         } else {
           let product = digit1 * digit2 * digit3;
-          alert("Число нечетное. Произведение цифр: " + product);
+          alert('13: Число нечетное. Произведение цифр: ' + product);
         }
       } else {
-        alert("Ошибка! Введено не трехзначное число.");
+        alert('13: Ошибка! Введено не трехзначное число.');
       }
-
-      // Задание 14
-      alert("=== Задание 14 ===");
-      let numInput = parseInt(prompt("Введите число (1-4):"));
+    ">13</button>
+    
+    <button onclick="
+      let numInput = parseInt(prompt('14: Введите число (1-4):'));
       let season;
       
       switch(numInput) {
@@ -145,12 +157,12 @@
           season = 'некорректное значение';
       }
       
-      alert("Результат: " + season);
-
-      // Задание 15
-      alert("=== Задание 15 ===");
-      let originalNum = prompt("Введите целое число:");
-      let reversedNum = "";
+      alert('14: Результат: ' + season);
+    ">14</button>
+    
+    <button onclick="
+      let originalNum = prompt('15: Введите целое число:');
+      let reversedNum = '';
       let i = originalNum.length - 1;
       
       while (i >= 0) {
@@ -158,16 +170,16 @@
         i--;
       }
       
-      alert("Число в обратном порядке: " + reversedNum);
-
-      // Задание 16
-      alert("=== Задание 16 ===");
+      alert('15: Число в обратном порядке: ' + reversedNum);
+    ">15</button>
+    
+    <button onclick="
       let totalSum = 0;
       let count = 0;
       let inputNum;
       
       while (true) {
-        inputNum = prompt("Введите число (0 для завершения):");
+        inputNum = prompt('16: Введите число (0 для завершения):');
         
         if (inputNum === null) {
           break;
@@ -187,67 +199,67 @@
       
       if (count > 0) {
         let average = totalSum / count;
-        alert("Статистика:\n" +
-              "Количество чисел: " + count + "\n" +
-              "Общая сумма: " + totalSum + "\n" +
-              "Среднее арифметическое: " + average.toFixed(2));
+        alert('16: Статистика:\n' +
+              'Количество чисел: ' + count + '\n' +
+              'Общая сумма: ' + totalSum + '\n' +
+              'Среднее арифметическое: ' + average.toFixed(2));
       } else {
-        alert("Не было введено чисел");
+        alert('16: Не было введено чисел');
       }
-
-      // Задание 17
-      alert("=== Задание 17 ===");
+    ">16</button>
+    
+    <button onclick="
       function squareNumber(x) {
         return x * x;
       }
-      let numForSquare = parseFloat(prompt("Введите число для возведения в квадрат:"));
-      alert("Квадрат числа " + numForSquare + " = " + squareNumber(numForSquare));
-
-      // Задание 18
-      alert("=== Задание 18 ===");
+      let numForSquare = parseFloat(prompt('17: Введите число для возведения в квадрат:'));
+      alert('17: Квадрат числа ' + numForSquare + ' = ' + squareNumber(numForSquare));
+    ">17</button>
+    
+    <button onclick="
       function getDayOfWeek(dayNumber) {
         switch(dayNumber) {
-          case 1: return "Понедельник";
-          case 2: return "Вторник";
-          case 3: return "Среда";
-          case 4: return "Четверг";
-          case 5: return "Пятница";
-          case 6: return "Суббота";
-          case 7: return "Воскресенье";
-          default: return "Некорректный номер дня";
+          case 1: return 'Понедельник';
+          case 2: return 'Вторник';
+          case 3: return 'Среда';
+          case 4: return 'Четверг';
+          case 5: return 'Пятница';
+          case 6: return 'Суббота';
+          case 7: return 'Воскресенье';
+          default: return 'Некорректный номер дня';
         }
       }
-      let dayNum = parseInt(prompt("Введите число от 1 до 7:"));
-      alert("День недели: " + getDayOfWeek(dayNum));
-
-      // Задание 19
-      alert("=== Задание 19 ===");
+      let dayNum = parseInt(prompt('18: Введите число от 1 до 7:'));
+      alert('18: День недели: ' + getDayOfWeek(dayNum));
+    ">18</button>
+    
+    <button onclick="
       function drawPyramid() {
-        let rows = parseInt(prompt("Введите количество рядов для пирамиды:"));
-        let pyramid = "";
+        let rows = parseInt(prompt('19: Введите количество рядов для пирамиды:'));
+        let pyramid = '';
         
         for (let i = 1; i <= rows; i++) {
           for (let j = 1; j <= i; j++) {
-            pyramid += "x";
+            pyramid += 'x';
           }
-          pyramid += "\n";
+          pyramid += '\n';
         }
         
-        alert("Пирамида:\n" + pyramid);
-        console.log("Пирамида:\n" + pyramid);
+        alert('19: Пирамида:\n' + pyramid);
+        console.log('19: Пирамида:\n' + pyramid);
       }
       drawPyramid();
-
-      // Задание 20
-      alert("=== Задание 20 ===");
+    ">19</button>
+    
+    <button onclick="
       let checkNumber = function(num) {
         return num > 0 && num < 10;
       };
-      let testNum = parseFloat(prompt("Введите число для проверки (0-10):"));
-      alert("Результат проверки: " + checkNumber(testNum));
-
-      // Задание 21
-      alert("=== Задание 21 ===");
+      let testNum = parseFloat(prompt('20: Введите число для проверки (0-10):'));
+      alert('20: Результат проверки: ' + checkNumber(testNum));
+    ">20</button>
+    
+    <button onclick="
       let calculate = (coeff1, coeff2, coeff3, coeff4, coeff5, xValue) => {
         return coeff1 * Math.pow(xValue, 4) + 
                coeff2 * Math.pow(xValue, 3) + 
@@ -256,42 +268,200 @@
                coeff5;
       };
       
-      alert("Введите коэффициенты:");
-      let coeff1 = parseFloat(prompt("a1:"));
-      let coeff2 = parseFloat(prompt("a2:"));
-      let coeff3 = parseFloat(prompt("a3:"));
-      let coeff4 = parseFloat(prompt("a4:"));
-      let coeff5 = parseFloat(prompt("a5:"));
-      let xValue = parseFloat(prompt("x:"));
+      alert('21: Введите коэффициенты:');
+      let coeff1 = parseFloat(prompt('a1:'));
+      let coeff2 = parseFloat(prompt('a2:'));
+      let coeff3 = parseFloat(prompt('a3:'));
+      let coeff4 = parseFloat(prompt('a4:'));
+      let coeff5 = parseFloat(prompt('a5:'));
+      let xValue = parseFloat(prompt('x:'));
       
-      let resulta = (coeff1, coeff2, coeff3, coeff4, coeff5, xValue);
-      alert("Результат: " + resulta);
-
-      // Задание 22
-      alert("=== Задание 22 ===");
+      let resulta = calculate(coeff1, coeff2, coeff3, coeff4, coeff5, xValue);
+      alert('21: Результат: ' + resulta);
+    ">21</button>
+    
+    <button onclick="
       function fibonacci(n) {
         if (n <= 1) return n;
         return fibonacci(n - 1) + fibonacci(n - 2);
       }
       
-      let fibNum = parseInt(prompt("Введите номер числа Фибоначчи:"));
-      alert("Число Фибоначчи с номером " + fibNum + " = " + fibonacci(fibNum));
-
-      // Задание 23
-      alert("=== Задание 23 ===");
+      let fibNum = parseInt(prompt('22: Введите номер числа Фибоначчи:'));
+      alert('22: Число Фибоначчи с номером ' + fibNum + ' = ' + fibonacci(fibNum));
+    ">22</button>
+    
+    <button onclick="
       function aFunction(printFunction) {
-        let userNumber = prompt("Введите число:");
+        let userNumber = prompt('23: Введите число:');
         printFunction(userNumber);
       }
       
       let anonymousFunc = function(number) {
-        console.log("Введенное число: " + number);
-        alert("Число выведено в консоль (F12)");
+        console.log('23: Введенное число: ' + number);
+        alert('23: Число выведено в консоль (F12)');
       };
       
       aFunction(anonymousFunc);
-
-      alert("Все задания выполнены!");
-    </script>
+    ">23</button>
+    
+    <br><br>
+    <h1>JavaScript Лабораторная работа №5</h1>
+    
+    <button onclick="
+      let obj = {a: 1, b: 2, c: 3};
+      alert('24:\n' +
+            'Через квадратные скобки: ' + obj['c'] + '\n' +
+            'Через свойство объекта: ' + obj.c);
+    ">24</button>
+    
+    <button onclick="
+      let days = {
+        1: 'Понедельник',
+        2: 'Вторник',
+        3: 'Среда',
+        4: 'Четверг',
+        5: 'Пятница',
+        6: 'Суббота',
+        0: 'Воскресенье'
+      };
+      let today = new Date().getDay();
+      alert('25: Сегодня ' + days[today]);
+    ">25</button>
+    
+    <button onclick="
+      let arr = [];
+      let sum = 0;
+      for (let i = 0; i < 20; i++) {
+        arr.push(Math.floor(Math.random() * 100));
+        sum += arr[i];
+      }
+      let average = sum / 20;
+      alert('26: Массив: ' + arr.join(', ') + '\n' +
+            'Среднее арифметическое: ' + average);
+    ">26</button>
+    
+    <button onclick="
+      let arr1 = ['a', 'b', 'c'];
+      let arr2 = [1, 2, 3];
+      let combined = arr1.concat(arr2);
+      alert('27: Объединенный массив: ' + combined);
+    ">27</button>
+    
+    <button onclick="
+      let arr = ['a', 'b', 'c'];
+      arr.push(1, 2, 3);
+      alert('28: Массив: ' + arr);
+    ">28</button>
+    
+    <button onclick="
+      let arr = [1, 2, 3];
+      let reversed = arr.slice().reverse();
+      alert('29: Оригинал: ' + arr + '\n' +
+            'Перевернутый: ' + reversed);
+    ">29</button>
+    
+    <button onclick="
+      let arr = [1, 2, 3];
+      arr.unshift(4, 5, 6);
+      alert('30: Массив: ' + arr);
+    ">30</button>
+    
+    <button onclick="
+      let arr = ['js', 'css', 'jq'];
+      alert('31: Первый: ' + arr[0] + ', Последний: ' + arr[-1]);
+    ">31</button>
+    
+    <button onclick="
+      let arr = [1, 2, 3, 4, 5];
+      let newArr = arr.slice(3);
+      alert('32: Новый массив: ' + newArr);
+    ">32</button>
+    
+    <button onclick="
+      let arr = [1, 2, 3, 4, 5];
+      arr.splice(3, 0, 'a', 'b', 'c');
+      alert('33: Массив: ' + arr);
+    ">33</button>
+    
+    <button onclick="
+      let arr = [3, 4, 1, 2, 7];
+      arr.sort((a, b) => a - b);
+      alert('34: Отсортированный массив: ' + arr);
+    ">34</button>
+    
+    <button onclick="
+      let obj = {js: 'test', jq: 'hello', css: 'world'};
+      let keys = Object.keys(obj);
+      alert('35: Ключи объекта: ' + keys);
+    ">35</button>
+    
+    <button onclick="
+      let arr = [];
+      for (let i = 0; i < 10; i++) {
+        arr.push(Math.floor(Math.random() * 21));
+      }
+      alert('36: Массив: ' + arr + '\n' +
+            'Есть число 5? ' + (arr.includes(5) ? 'да' : 'нет'));
+    ">36</button>
+    
+    <button onclick="
+      let arr = [];
+      for (let i = 0; i < 15; i++) {
+        arr.push(Math.floor(Math.random() * 101) - 50);
+      }
+      let filtered = arr.filter(num => num > 0 && num < 10);
+      alert('37: Исходный массив: ' + arr + '\n' +
+            'Отфильтрованный: ' + filtered);
+    ">37</button>
+    
+    <button onclick="
+      let arr = [23, 34, 22, 9, 11];
+      let squared = arr.map(num => num * num);
+      alert('38: Оригинал: ' + arr + '\n' +
+            'В квадрате: ' + squared);
+    ">38</button>
+    
+    <button onclick="
+      let person = {
+        name: 'Алексей',
+        sayHello: function() {
+          alert('39: Привет, меня зовут ' + this.name);
+        }
+      };
+      person.sayHello();
+    ">39</button>
+    
+    <button onclick="
+      let numberStore = {
+        numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+        checkNumber: function(num) {
+          if (this.numbers.includes(num)) {
+            alert('40: Число ' + num + ' найдено в массиве');
+            return num;
+          } else {
+            alert('40: Число ' + num + ' не найдено, добавляем в массив');
+            this.numbers.push(num);
+            return null;
+          }
+        }
+      };
+      let inputNum = parseInt(prompt('40: Введите число от 0 до 25:'));
+      numberStore.checkNumber(inputNum);
+      alert('40: Текущий массив: ' + numberStore.numbers);
+    ">40</button>
+    
+    <button onclick="
+      function Student(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function() {
+          alert('41: Привет, меня зовут ' + this.firstName);
+        };
+      }
+      let student1 = new Student('Иван', 'Иванов');
+      let student2 = new Student('Мария', 'Петрова');
+      student1.sayHello();
+      student2.sayHello();
+    ">41</button>
   </body>
 </html>
