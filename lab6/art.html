@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статьи об Эвенкии</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <h1 class="hed_pl">Статьи об Эвенкии</h1>
+
+        <input type="text" placeholder="Поиск..." oninput="searchArticles(this.value)">
+        <div id="articlesList"></div>
+        
+        <button onclick="loadData()">Загрузить данные из JSON</button>
+        <pre id="output"></pre>
+    </main>
+
+    <script>
+        const jsonData = {
+            "регион": "Эвенкия",
+            "столица": "Тура",
+            "население": 16000,
+            "площадь_км2": 767600,
+            "достопримечательности": [
+                "Плато Путорана",
+                "Озеро Виви",
+                "Эвенкийский краеведческий музей"
+            ],
+            "статьи": [
+                {
+                    "id": 1,
+                    "title": "Культура эвенков",
+                    "description": "Традиции и обычаи коренного народа"
+                },
+                {
+                    "id": 2,
+                    "title": "Плато Путорана",
+                    "description": "Уникальный природный объект Сибири"
+                }
+            ]
+        };
+        // Статьи в массиве
+        const articles = [
+            {title: "Культура эвенков", desc: "Традиции и обычаи коренного народа"},
+            {title: "Плато Путорана", desc: "Уникальный природный объект Сибири"},
+            {title: "История Эвенкии", desc: "От древности до современности"},
+            {title: "Туризм в Эвенкии", desc: "Лучшие маршруты и места"},
+            {title: "Знаменитые эвенки", desc: "Выдающиеся представители народа"}
+        ];
+
+        // Функция поиска
+        function searchArticles(searchText) {
+            const found = articles.filter(article =>
+                article.title.toLowerCase().includes(searchText.toLowerCase())
+            );
+            
+            // Показываем найденные статьи
+            document.getElementById('articlesList').innerHTML =
+                found.map(a => '<div><h3>' + a.title + '</h3><p>' + a.desc + '</p></div>').join('');
+        }
+
+        // Показываем все статьи вначале
+        searchArticles('');
+
+        // Функция для загрузки данных из JSON файла
+        function loadData() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'Data.json', true);
+            
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // Парсим JSON и выводим с отступами
+                    const data = JSON.parse(xhr.responseText);
+                    document.getElementById('output').textContent = 
+                        JSON.stringify(data, null, 2);
+                } else {
+                    document.getElementById('output').textContent = 
+                        'Ошибка загрузки файла. Статус: ' + xhr.status;
+                }
+            };
+            
+            xhr.onerror = function() {
+                document.getElementById('output').textContent = 
+                    'Ошибка сети. Убедитесь, что файл Data.json существует и доступен.';
+            };
+            
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

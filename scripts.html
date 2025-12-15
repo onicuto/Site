@@ -312,7 +312,7 @@
       alert('24:\n' +
             'Через квадратные скобки: ' + obj['c'] + '\n' +
             'Через свойство объекта: ' + obj.c);
-    ">24</button>
+    ">1</button>
     
     <button onclick="
       let days = {
@@ -326,7 +326,7 @@
       };
       let today = new Date().getDay();
       alert('25: Сегодня ' + days[today]);
-    ">25</button>
+    ">2</button>
     
     <button onclick="
       let arr = [];
@@ -338,62 +338,62 @@
       let average = sum / 20;
       alert('26: Массив: ' + arr.join(', ') + '\n' +
             'Среднее арифметическое: ' + average);
-    ">26</button>
+    ">3</button>
     
     <button onclick="
       let arr1 = ['a', 'b', 'c'];
       let arr2 = [1, 2, 3];
       let combined = arr1.concat(arr2);
       alert('27: Объединенный массив: ' + combined);
-    ">27</button>
+    ">4</button>
     
     <button onclick="
       let arr = ['a', 'b', 'c'];
       arr.push(1, 2, 3);
       alert('28: Массив: ' + arr);
-    ">28</button>
+    ">5</button>
     
     <button onclick="
       let arr = [1, 2, 3];
       let reversed = arr.slice().reverse();
       alert('29: Оригинал: ' + arr + '\n' +
             'Перевернутый: ' + reversed);
-    ">29</button>
+    ">6</button>
     
     <button onclick="
       let arr = [1, 2, 3];
       arr.unshift(4, 5, 6);
       alert('30: Массив: ' + arr);
-    ">30</button>
+    ">7</button>
     
     <button onclick="
       let arr = ['js', 'css', 'jq'];
       alert('31: Первый: ' + arr[0] + ', Последний: ' + arr[-1]);
-    ">31</button>
+    ">8</button>
     
     <button onclick="
       let arr = [1, 2, 3, 4, 5];
       let newArr = arr.slice(3);
       alert('32: Новый массив: ' + newArr);
-    ">32</button>
+    ">9</button>
     
     <button onclick="
       let arr = [1, 2, 3, 4, 5];
       arr.splice(3, 0, 'a', 'b', 'c');
       alert('33: Массив: ' + arr);
-    ">33</button>
+    ">10</button>
     
     <button onclick="
       let arr = [3, 4, 1, 2, 7];
       arr.sort((a, b) => a - b);
       alert('34: Отсортированный массив: ' + arr);
-    ">34</button>
+    ">11</button>
     
     <button onclick="
       let obj = {js: 'test', jq: 'hello', css: 'world'};
       let keys = Object.keys(obj);
       alert('35: Ключи объекта: ' + keys);
-    ">35</button>
+    ">12</button>
     
     <button onclick="
       let arr = [];
@@ -402,7 +402,7 @@
       }
       alert('36: Массив: ' + arr + '\n' +
             'Есть число 5? ' + (arr.includes(5) ? 'да' : 'нет'));
-    ">36</button>
+    ">13</button>
     
     <button onclick="
       let arr = [];
@@ -412,14 +412,14 @@
       let filtered = arr.filter(num => num > 0 && num < 10);
       alert('37: Исходный массив: ' + arr + '\n' +
             'Отфильтрованный: ' + filtered);
-    ">37</button>
+    ">14</button>
     
     <button onclick="
       let arr = [23, 34, 22, 9, 11];
       let squared = arr.map(num => num * num);
       alert('38: Оригинал: ' + arr + '\n' +
             'В квадрате: ' + squared);
-    ">38</button>
+    ">15</button>
     
     <button onclick="
       let person = {
@@ -429,7 +429,7 @@
         }
       };
       person.sayHello();
-    ">39</button>
+    ">16</button>
     
     <button onclick="
       let numberStore = {
@@ -448,7 +448,7 @@
       let inputNum = parseInt(prompt('40: Введите число от 0 до 25:'));
       numberStore.checkNumber(inputNum);
       alert('40: Текущий массив: ' + numberStore.numbers);
-    ">40</button>
+    ">17</button>
     
     <button onclick="
       function Student(firstName, lastName) {
@@ -462,6 +462,6 @@
       let student2 = new Student('Мария', 'Петрова');
       student1.sayHello();
       student2.sayHello();
-    ">41</button>
+    ">18</button>
   </body>
 </html>

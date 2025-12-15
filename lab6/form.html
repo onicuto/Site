@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Авторизация</title>
+  </head>
+  <body>
+    <div id="greeting"></div>
+    
+    <div id="successMessage" style="display: none;">
+      <p>Данные успешно сохранены!</p>
+    </div>
+
+
+    <form id="authForm">
+      <fieldset>
+        <legend>Авторизация</legend>
+
+        <div id="formContent">
+          <label for="email">Логин:</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required/>
+          <br/>
+          <br/>
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required/>
+          <br/>
+          <br/>
+          <input type="submit" value="Отправить"/>
+        </div>
+      </fieldset>
+    </form>
+
+    <script>
+      // Проверяем, есть ли сохраненные данные при загрузке страницы
+      if (localStorage.email) {
+        // Извлекаем имя из email (часть до @)
+        const userName = localStorage.email.split('@')[0];
+        document.getElementById('greeting').innerHTML = 
+          `Добрый день, ${userName}`;
+        
+        // Заполняем поле email сохраненным значением
+        document.getElementById('email').value = localStorage.email || '';
+        
+        // Заполняем поле пароля (в реальном приложении так делать нельзя!)
+        document.getElementById('password').value = localStorage.password || '';
+      }
+
+      // Обработчик отправки формы
+      document.getElementById('authForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Сохраняем данные в localStorage
+        localStorage.email = document.getElementById('email').value;
+        localStorage.password = document.getElementById('password').value;
+        
+        // Показываем сообщение об успехе
+        alert('Данные сохранены!');
+        
+        // Обновляем приветствие
+        const userName = localStorage.email.split('@')[0];
+        document.getElementById('greeting').innerHTML = 
+          `Добрый день, ${userName}`;
+        
+        // Скрываем форму и показываем сообщение
+        document.getElementById('formContent').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+      });
+    </script>
+  </body>
+</html>
