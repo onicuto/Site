@@ -8,7 +8,7 @@
 </head>
 <body class="main">
     <nav class="nav">
-      <a class="actbt_main" href="site.html">Эвенкия</a>
+      <a class="actbt_main" href="index.html">Эвенкия</a>
       <a class="bt_main" href="history.html">История</a>
       <a class="bt_main" href="places.html">Туризм</a>
       <a class="bt_main" href="peoples.html">Знаменитости</a>
@@ -28,45 +28,6 @@
       <section>
         <img class="img" src="img/plato.jpg" alt="Изображение пейзажа Эвенкии">
       </section>
-      <footer id="locationInfo">
-        <!-- Здесь будет информация о расстоянии -->
-      </footer>
     </main>
-    <script>
-      console.log('Заголовок:', document.querySelector('h1').textContent);
-      document.querySelector('footer').innerHTML +=
-          '<button onclick="alert(new Date())">Узнать время</button>';
-
-      // Определение расстояния до НГТУ
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          // Координаты НГТУ им. Р.Е. Алексеева (1 корпус)
-          const ngtuLat = 56.3281;
-          const ngtuLon = 43.9921;
-          
-          // Текущие координаты пользователя
-          const userLat = position.coords.latitude;
-          const userLon = position.coords.longitude;
-          
-          // Разница в координатах
-          const latDiff = userLat - ngtuLat;
-          const lonDiff = userLon - ngtuLon;
-          
-          // Расчет расстояния в км (примерная формула)
-          const distance = Math.sqrt(latDiff * latDiff + lonDiff * lonDiff) * 111;
-          
-          // Вывод информации в footer
-          document.getElementById('locationInfo').innerHTML += 
-            `<p>Расстояние до НГТУ им. Р.Е. Алексеева: ${distance.toFixed(1)} км</p>`;
-        }, function(error) {
-          // Обработка ошибок геолокации
-          document.getElementById('locationInfo').innerHTML += 
-            '<p>Не удалось определить расстояние до НГТУ (геолокация недоступна)</p>';
-        });
-      } else {
-        document.getElementById('locationInfo').innerHTML += 
-          '<p>Геолокация не поддерживается вашим браузером</p>';
-      }
-    </script>
 </body>
 </html>
