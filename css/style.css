@@ -317,3 +317,193 @@
         padding: 10px;
     }
 }
+
+.hidden-audio {
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+#evenkiaMap {
+    height: 500px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 3px solid #2F2F2F;
+}
+        
+.map-container {
+    position: relative;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+        
+.map-title {
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 24px;
+    color: #2F2F2F;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    
+    /* Общие настройки */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Навигация */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .bt, .actbt, .bt_main, .actbt_main {
+        width: 90%;
+        max-width: 300px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        margin: 5px 0;
+    }
+    
+    /* Заголовки */
+    .hed, .hed_main, .hed_pl {
+        font-size: 32px;
+        text-align: center;
+        left: 0;
+        margin: 20px 0;
+    }
+    
+    /* Главные контейнеры */
+    .main_pos, .main_pos_2, .main_pos_3 {
+        flex-direction: column;
+        gap: 30px;
+        top: 0;
+        padding: 0 15px;
+    }
+    
+    /* Карточки с текстом и изображениями */
+    .text_img, .text_img_2, .text_img_2_2, .text_img_1, .text_img_3,
+    .text, .text_main, .form {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    
+    .text_img_1, .text_img_2_2, .text_img_3 {
+        height: auto;
+        min-height: 560px;
+    }
+    
+    /* Изображения в карточках */
+    .img_pl {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .img_pe, .img_pe_2, .img_pe_3 {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 20px auto;
+    }
+    
+    /* Позиционирование текста в text_img_1 */
+    .txt {
+        position: static;
+        top: 0;
+    }
+    
+    /* Форма */
+    form fieldset {
+        padding: 15px;
+    }
+    
+    label, input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    /* Видео и аудио */
+    .video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+    }
+    
+    #videoControls {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 15px 0;
+    }
+    
+    #videoControls button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    /* Таблица */
+    .table-container {
+        width: 95%;
+        margin: 20px auto;
+        overflow-x: auto;
+        font-size: 14px;
+    }
+    
+    .settlements-table th,
+    .settlements-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .settlements-table {
+        min-width: 600px; /* Для горизонтального скролла */
+    }
+    
+    /* Карта */
+    #evenkiaMap {
+        height: 350px;
+        margin: 20px auto;
+    }
+    
+    .map-title {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    
+    /* Главное изображение на index.html */
+    .img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Списки на form.html */
+    ul {
+        padding-left: 20px;
+    }
+    
+    li {
+        margin-bottom: 8px;
+    }
+}
