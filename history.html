@@ -29,9 +29,33 @@
         </section>
       </section>
         <section>
-          <video class="video" src="media/video.m4v" controls preloaded></video>
-          <audio src="media/snow.mp3" preloaded controls></audio>
+          <video controls preload>
+            <source src="media/video.m4v" type="video/mp4">
+          </video>
+          <br><br>
+          <audio controls>
+            <source src="media/snow.mp3" type="audio/mpeg">
+          </audio>
+          
+          <div id="videoControls">
+            <button  onclick="playMedia() ">▶ Воспроизвести</button>
+            <button  onclick="pauseMedia()">⏸ Пауза</button>
+          </div>
         </section>
+    <script>
+        const video = document.querySelector('video');
+        const audio = document.querySelector('audio');
+        
+        function playMedia() {
+            if(video) video.play();
+            if(audio) audio.play();
+        }
+        
+        function pauseMedia() {
+            if(video) video.pause();
+            if(audio) audio.pause();
+        }
+    </script>
     </main>
 </body>
 </html>
