@@ -1,0 +1,508 @@
+.img {
+  border-radius: 15px;
+  max-width: 823px;
+  max-height: 576px;
+}
+
+.main_pos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  bottom: 10px;
+}
+
+.actbt_main {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  border: 3px solid #2F2F2F;
+  width: 250px;
+  height: 75px;
+  color: #2F2F2F;
+  text-decoration: none;
+  text-align: center;
+  line-height: 75px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.bt_main {
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 3px solid #FFFFFF;
+  background-color: #2F2F2F;
+  width: 250px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.main {
+  background-color: #2F2F2F;
+}
+
+.other {
+}
+
+.hed_main {
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+  color: #FFFFFF;
+}
+
+.text_main {
+  border-left: 3px solid #027DB6;
+  max-width: 550px;
+  color: #FFFFFF;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.main_pos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  position: relative;
+  top: 50px;
+}
+
+.actbt {
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 3px solid #FFFFFF;
+  background-color: #2F2F2F;
+  width: 250px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.bt {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  border: 3px solid #2F2F2F;
+  width: 250px;
+  height: 75px;
+  color: #2F2F2F;
+  text-decoration: none;
+  text-align: center;
+  line-height: 75px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.text {
+  border-radius: 15px;
+  max-width: 550px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  padding: 20px;
+  background-color: #E2E2DD;
+}
+
+.hed {
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+}
+
+.text_img_1 {
+  border-radius: 15px;
+  width: 550px;
+  height: 560px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  background-color: #E2E2DD;
+}
+
+.text_img {
+  border-radius: 15px;
+  max-width: 550px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  background-color: #E2E2DD;
+}
+
+.img_pl {
+  max-width: 534px;
+  max-height: 374px;
+  border-radius: 15px;
+}
+
+.text_img_2_2 {
+  border-radius: 15px;
+  width: 550px;
+  height: 560px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  background-color: #2F2F2F;
+  color: #FFFFFF;
+}
+
+.text_img_2 {
+  border-radius: 15px;
+  max-width: 550px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  background-color: #2F2F2F;
+  color: #FFFFFF;
+}
+
+.hed_pl {
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+  position: relative;
+  left: 100px;
+}
+
+.img_pe {
+  width: 264px;
+  height: 375px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.img_pe_2 {
+  width: 225px;
+  height: 307px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.text_img_3 {
+  border-radius: 15px;
+  width: 550px;
+  height: 560px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  background-color: #027DB6;
+  color: #FFFFFF;
+}
+
+.img_pe_3 {
+  width: 376px;
+  height: 376px;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.main_pos_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+  top: 25px;
+}
+
+.main_pos_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  top: 25px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.txt {
+  position: relative;
+  top: 65px;
+}
+
+.form {
+  border-radius: 15px;
+  max-width: 550px;
+  font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  padding: 20px;
+  background-color: #2F2F2F;
+  color: #FFFFFF;
+}
+
+.video {
+  border-radius: 15px;
+  max-width: 823px;
+  max-height: 576px;
+  position: relative;
+  top: 50px;
+}
+
+.table-container {
+    width: 90%;
+    margin: 40px auto;
+    overflow-x: auto; /* Для горизонтального скролла на маленьких экранах */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Стили самой таблицы */
+.settlements-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Segoe UI", Segoe, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden; /* Чтобы border-radius работал с таблицей */
+}
+
+/* Заголовки таблицы */
+.settlements-table thead {
+    background-color: #2F2F2F;
+    color: #FFFFFF;
+}
+
+.settlements-table th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 3px solid #027DB6;
+}
+
+/* Ячейки таблицы */
+.settlements-table td {
+    padding: 15px;
+    border-bottom: 1px solid #E2E2DD;
+    vertical-align: top;
+}
+
+/* Чередование цвета строк для удобочитаемости */
+.settlements-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.settlements-table tbody tr:hover {
+    background-color: #e9f7fe; /* Легкий голубой при наведении */
+    transition: background-color 0.3s ease;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1200px) {
+    .table-container {
+        width: 95%;
+    }
+    .settlements-table {
+        font-size: 14px;
+    }
+    .settlements-table th,
+    .settlements-table td {
+        padding: 10px;
+    }
+}
+
+.hidden-audio {
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+#evenkiaMap {
+    height: 500px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 3px solid #2F2F2F;
+}
+        
+.map-container {
+    position: relative;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+        
+.map-title {
+    text-align: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 24px;
+    color: #2F2F2F;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    
+    /* Общие настройки */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Навигация */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .bt, .actbt, .bt_main, .actbt_main {
+        width: 90%;
+        max-width: 300px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        margin: 5px 0;
+    }
+    
+    /* Заголовки */
+    .hed, .hed_main, .hed_pl {
+        font-size: 32px;
+        text-align: center;
+        left: 0;
+        margin: 20px 0;
+    }
+    
+    /* Главные контейнеры */
+    .main_pos, .main_pos_2, .main_pos_3 {
+        flex-direction: column;
+        gap: 30px;
+        top: 0;
+        padding: 0 15px;
+    }
+    
+    /* Карточки с текстом и изображениями */
+    .text_img, .text_img_2, .text_img_2_2, .text_img_1, .text_img_3,
+    .text, .text_main, .form {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    
+    .text_img_1, .text_img_2_2, .text_img_3 {
+        height: auto;
+        min-height: 560px;
+    }
+    
+    /* Изображения в карточках */
+    .img_pl {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .img_pe, .img_pe_2, .img_pe_3 {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 20px auto;
+    }
+    
+    /* Позиционирование текста в text_img_1 */
+    .txt {
+        position: static;
+        top: 0;
+    }
+    
+    /* Форма */
+    form fieldset {
+        padding: 15px;
+    }
+    
+    label, input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    /* Видео и аудио */
+    .video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        top: 0;
+    }
+    
+    #videoControls {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 15px 0;
+    }
+    
+    #videoControls button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    /* Таблица */
+    .table-container {
+        width: 95%;
+        margin: 20px auto;
+        overflow-x: auto;
+        font-size: 14px;
+    }
+    
+    .settlements-table th,
+    .settlements-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .settlements-table {
+        min-width: 600px; /* Для горизонтального скролла */
+    }
+    
+    /* Карта */
+    #evenkiaMap {
+        height: 350px;
+        margin: 20px auto;
+    }
+    
+    .map-title {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    
+    /* Главное изображение на index.html */
+    .img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Списки на form.html */
+    ul {
+        padding-left: 20px;
+    }
+    
+    li {
+        margin-bottom: 8px;
+    }
+}

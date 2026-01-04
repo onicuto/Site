@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Населённые пункты Эвенкии</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+</head>
+<body>
+    <nav class="nav">
+      <a class="bt" href="index.html">Эвенкия</a>
+      <a class="bt" href="history.html">История</a>
+      <a class="bt" href="places.html">Туризм</a>
+      <a class="bt" href="peoples.html">Знаменитости</a>
+      <a class="bt" href="form.html">Бронирование</a>
+      <a class="actbt" href="table.html">Поселения</a>
+    </nav>
+    <main>
+        <h1 class="hed_pl">Населённые пункты Эвенкии</h1>
+        
+        <section class="table-container">
+            <table class="settlements-table">
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Тип</th>
+                        <th>Примерная численность</th>
+                        <th>Основные занятия</th>
+                        <th>Примечание / Достопримечательность</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Тура</strong></td>
+                        <td>Посёлок городского типа (адм. центр)</td>
+                        <td>~ 5 500 человек</td>
+                        <td>Администрация, лесозаготовка, образование, торговля</td>
+                        <td>Эвенкийский краеведческий музей, аэропорт. Расположен при слиянии рек Кочечум и Нижняя Тунгуска.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Байкит</strong></td>
+                        <td>Село</td>
+                        <td>~ 3 300 человек</td>
+                        <td>Оленеводство, охота, рыболовство, геологоразведка</td>
+                        <td>Один из старейших посёлков (осн. в 1927 г.). Крупный оленеводческий совхоз. Портовый пункт на реке Подкаменная Тунгуска.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ванавара</strong></td>
+                        <td>Село</td>
+                        <td>~ 2 800 человек</td>
+                        <td>Лесное хозяйство, туризм</td>
+                        <td>Всемирно известен как ближайший населённый пункт к <strong>месту падения Тунгусского метеорита (1908 г.)</strong>. Отсюда начинаются туристические маршруты к эпицентру.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Тутончаны</strong></td>
+                        <td>Село</td>
+                        <td>~ 1 100 человек</td>
+                        <td>Оленеводство, рыболовство, сбор дикоросов</td>
+                        <td>Традиционное эвенкийское стойбище. Сохраняется национальная культура и язык.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ессей</strong></td>
+                        <td>Село</td>
+                        <td>~ 600 человек</td>
+                        <td>Рыболовство, оленеводство</td>
+                        <td>Расположен на берегу одноимённого озера Ессей, известного чистейшей водой и рыбными ресурсами.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Юкта</strong></td>
+                        <td>Посёлок</td>
+                        <td>~ 80 человек</td>
+                        <td>Рыболовство, охота, сбор ягод и грибов</td>
+                        <td>Небольшой посёлок на берегу реки Нижняя Тунгуска. Известен традиционными ремёслами эвенков.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+        <div class="map-container">
+            <h2 class="map-title">Географическое расположение поселений Эвенкии</h2>
+            <div id="evenkiaMap"></div>
+        </div>
+        
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    <script>
+        const settlements = [
+            {
+                name: "Тура",
+                coords: [64.28, 100.22],
+                population: 5500,
+                description: "Административный центр Эвенкии. Расположен при слиянии рек Кочечум и Нижняя Тунгуска."
+            },
+            {
+                name: "Байкит",
+                coords: [61.677778, 96.383333],
+                population: 3300,
+                description: "Один из старейших посёлков (основан в 1927 г.). Крупный оленеводческий центр."
+            },
+            {
+                name: "Ванавара",
+                coords: [60.345278, 102.284167],
+                population: 2800,
+                description: "Известен как ближайший населённый пункт к месту падения Тунгусского метеорита (1908 г.)."
+            },
+            {
+                name: "Тутончаны",
+                coords: [64.210833, 93.794444],
+                population: 1100,
+                description: "Традиционное эвенкийское стойбище. Сохраняется национальная культура и язык."
+            },
+            {
+                name: "Ессей",
+                coords: [68.465, 102.188611],
+                population: 600,
+                description: "Расположен на берегу озера Ессей с чистейшей водой и богатыми рыбными ресурсами."
+            },
+            {
+               name: "Юкта",
+               coords: [63.385833, 105.652778], // 63°23′09″ с. ш. 105°39′10″ в. д.
+               population: 80,
+               description: "Небольшой посёлок на берегу реки Нижняя Тунгуска. Известен традиционными ремёслами эвенков."
+            }
+               ];
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('evenkiaMap').setView([65.0, 100.0], 5);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap',
+                maxZoom: 18,
+                minZoom: 3
+            }).addTo(map);
+            
+            settlements.forEach(settlement => {
+                const marker = L.marker(settlement.coords).addTo(map);
+                
+                const popupContent = `
+                    <div style="font-family: 'Segoe UI', sans-serif; max-width: 300px;">
+                        <h3 style="margin: 0 0 10px 0; color: #027DB6;">${settlement.name}</h3>
+                        <p><strong>Население:</strong> ~${settlement.population} человек</p>
+                        <p>${settlement.description}</p>
+                    </div>
+                `;
+                
+                marker.bindPopup(popupContent);
+            });
+
+            console.log('Карта Leaflet.js успешно загружена с поселениями Эвенкии');
+        });
+    </script>
+</body>
+</html>

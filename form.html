@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Бронирование</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="bt" href="index.html">Эвенкия</a>
+      <a class="bt" href="history.html">История</a>
+      <a class="bt" href="places.html">Туризм</a>
+      <a class="bt" href="peoples.html">Знаменитости</a>
+      <a class="actbt" href="form.html">Бронирование</a>
+      <a class="bt" href="table.html">Поселения</a>
+    </nav>
+    <h1 class="hed_pl">На нашем сайте вы так же можете забронировать чум</h1>
+    <section class="main_pos">
+      <section class="text">
+      <p>При бронировании чума включены следующие услуги:</p>
+      <ul>
+        <li>Проживание в традиционном эвенкийском чуме</li>
+        <li>Национальные эвенкийские блюда (завтрак, обед, ужин)</li>
+        <li>Знакомство с культурой и традициями эвенков</li>
+        <li>Экскурсия по стойбищу</li>
+        <li>Мастер-класс по национальным ремёслам</li>
+        <li>Возможность участия в традиционных обрядах</li>
+        <li>Фотосессия в национальной одежде</li>
+      </ul>
+    </section>
+    <section class="form">
+      <form>
+       <fieldset>
+         <legend>Бронирование чума</legend>
+        
+         <label for="fullname">ФИО:</label>
+         <input type="text" name="fullname" placeholder="Иванов Иван Иванович" required/>
+         <br/>
+         <br/>
+         
+         <label for="phone">Номер телефона:</label>
+         <input type="tel" name="phone" placeholder="+7 (XXX) XXX-XX-XX" required/>
+         <br/>
+         <br/>
+        
+         <label for="arrival-date">Дата заезда:</label>
+         <input type="date" name="arrival-date" required/>
+         <br/>
+         <br/>
+        
+         <label for="departure-date">Дата выезда:</label>
+         <input type="date" name="departure-date" required/>
+         <br/>
+         <br/>
+        
+         <input type="submit" value="Забронировать"/>
+       </fieldset>
+      </form>
+    </section>
+    </section>
+  </body>
+</html>
